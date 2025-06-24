@@ -60,3 +60,21 @@ class BasicBot:
         except Exception as e:
             self.logger.error(f"Error placing stop-market order: {e}")
             return None
+
+     def place_stop_limit_order(self, symbol, side, quantity, price, stop_price):
+    try:
+        order = self.client.futures_create_order(
+            symbol=symbol.upper(),
+            side=side.upper(),
+            type=ORDER_TYPE_STOP,
+            quantity=quantity,
+            price=str(price),
+            stopPrice=str(stop_price),
+            timeInForce=TIME_IN_FORCE_GTC
+        )
+        self.logger.info(f"Stop-Limit Order placed: {order}")
+        return order
+    except Exception as e:
+        self.logger.error(f"Error placing Stop-Limit order: {e}")
+        return None
+
