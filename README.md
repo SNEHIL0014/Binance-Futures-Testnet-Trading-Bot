@@ -125,7 +125,8 @@ Trading cryptocurrencies involves significant risk, and this bot should **not** 
 ## 👨‍💻 Author
 
 Snehil Srivastava
-*Built for learning and experimentation with automated crypto trading.*
+
+Built for learning and experimentation with automated crypto trading.
 
 ---
 
